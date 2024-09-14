@@ -1,7 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
 
 function App() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Add login logic here (e.g., API call)
+    console.log('Login attempted with:', { email, password });
+  };
+
   return (
     <div className="App">
       <header className="App-header">
